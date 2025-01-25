@@ -1,9 +1,14 @@
+// Components
+import Header from './components/Header'
+
+
 function App() {
  
 
   return (
     <>
-      <p class="text-green-400">HIJAU</p>
+    <Header/>
+    
     </>
   )
 }
