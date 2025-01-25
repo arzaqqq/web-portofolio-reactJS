@@ -12,6 +12,19 @@ body {
   @apply bg-zinc-900 text-zinc-50 
 }
 
+/* TYPOGRAPHY */
+.headline-1{
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #bdbdbd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-1{
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15] 
+}
+
+
 /* UTILITIES */
 .material-symbols-rounded{
   @apply w-[1em] h-[1em] overflow-hidden;
