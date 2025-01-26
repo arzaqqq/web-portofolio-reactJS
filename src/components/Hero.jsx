@@ -1,5 +1,7 @@
 import React from 'react'
 
+// COMPONENTS
+import {ButtonPrimary, ButtonOutline} from "./Button";
 
 const Hero = () => {
   return (
@@ -14,7 +16,7 @@ const Hero = () => {
                              width={40}
                              height={40}
                              alt="Miftahul Arzaq"
-                             className='ing-cover' />
+                             className='img-cover' />
                     </figure>
                     <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
                         <span className="relative w-2 h-2 rounded-full bg-emerald-400 ">
@@ -28,9 +30,9 @@ const Hero = () => {
                     Ayo Mulai bekerja sama dengan saya agar bisnis anda lebih modern
                 </h2>
                 <div className="flex items-center gap-3">
-                    ButtonPrimary
+                    <ButtonPrimary label="Download CV" icon="download"/>
 
-                    ButtonOutline
+                    <ButtonOutline href="#about" label='scroll down' icon="arrow_downward" />
                 </div>
 
             </div>
