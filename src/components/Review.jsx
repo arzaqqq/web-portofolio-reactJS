@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReviewCard from './ReviewCard';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Daftar GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
 
 const reviews = [
     {
@@ -41,15 +46,27 @@ const reviews = [
 ];
 
 const Review = () => {
+    useEffect(() => {
+        gsap.to('.scrub-slide', {
+            x: '-1000', // Animasi perpindahan pada sumbu X
+            scrollTrigger: {
+                trigger: '.scrub-slide',
+                start: 'top bottom', // Mulai animasi saat elemen mencapai bagian bawah viewport
+                end: 'top top', // Berakhir saat elemen mencapai bagian atas viewport
+                scrub: true, // Sinkronisasi animasi dengan scroll
+            },
+        });
+    }, []);
+
     return (
         <section
             id="reviews"
             className="section overflow-hidden">
             <div className="container max-w-[1200px] mx-auto">
-                <h2 className="headline-2 mb-8">
+                <h2 className="headline-2 mb-8 reveal-up">
                     Feedback dari para customer
                 </h2>
-                <div className="flex items-stretch gap-3 w-fit overflow-x-auto">
+                <div className="scrub-slide flex items-stretch gap-3 w-full">
                     {reviews.map(({ content, name, imgSrc, company }, index) => (
                         <ReviewCard
                             key={`${name}-${index}`}

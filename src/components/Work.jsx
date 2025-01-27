@@ -48,7 +48,7 @@ const Work = () => {
     id='work'
     >
         <div className="container">
-            <h2 className='headline-2 mb-8'>
+            <h2 className='headline-2 mb-8 reveal-up'>
                 Portofolio saya
             </h2>
 
@@ -59,7 +59,8 @@ const Work = () => {
                    imgSrc={imgSrc}
                    title={title}
                    tags={tags}
-                   projectLink={projectLink}/>
+                   projectLink={projectLink}
+                   className="reveal-up"/>
                 ))}
             </div>
         </div>
