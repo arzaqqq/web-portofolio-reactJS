@@ -61,13 +61,14 @@ const Contact = () => {
                </div>
 
                <form 
-                    action=""
+                    action="https://getform.io/f/azyymoob"
                     method='POST' 
                     className='xl:pl-10 2xl:pl-10'>
 
                  
-                        <div className="md:grid  md:items-center md:grid-cols md:gap-2">
-                            <label
+                        <div className="md:grid  md:items-center md:grid-cols-2 md:gap-2">
+                           <div className="mb-4">
+                           <label
                                  htmlFor="name"
                                  className='label'>
                                     Name
@@ -75,6 +76,7 @@ const Contact = () => {
 
                                  <input type="text" name="name" id="name" autoComplete='name' required placeholder='Miftahul Arzaq' className='text-field'/>
                         </div>
+                          
 
                         <div className="mb-4">
                             <label
@@ -84,6 +86,7 @@ const Contact = () => {
                                  </label>
 
                                  <input type="email" name="email" id="email" autoComplete='email' required placeholder='miftahularzaq@gmail.com' className='text-field'/>
+                        </div>
                         </div>
 
                        <div className="mb-4">
