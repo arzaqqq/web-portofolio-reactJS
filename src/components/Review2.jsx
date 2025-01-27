@@ -42,26 +42,25 @@ const reviews = [
 
 const Review = () => {
     return (
-        <section
-            id="reviews"
-            className="section overflow-hidden">
-            <div className="container max-w-[1200px] mx-auto">
-                <h2 className="headline-2 mb-8">
-                    Feedback dari para customer
-                </h2>
-                <div className="flex items-stretch gap-3 w-fit overflow-x-auto">
-                    {reviews.map(({ content, name, imgSrc, company }, index) => (
-                        <ReviewCard
-                            key={`${name}-${index}`}
-                            name={name}
-                            imgSrc={imgSrc}
-                            company={company}
-                            content={content}
-                        />
-                    ))}
-                </div>
-            </div>
-        </section>
+        <section id="reviews" className="section overflow-hidden">
+        <div className="container max-w-[1200px] mx-auto px-4">
+          <h2 className="headline-2 mb-8">
+            Feedback dari para customer
+          </h2>
+          <div className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden">
+            {reviews.map(({ content, name, imgSrc, company }, index) => (
+              <ReviewCard
+                key={`${name}-${index}`}
+                name={name}
+                imgSrc={imgSrc}
+                company={company}
+                content={content}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      
     );
 };
 
