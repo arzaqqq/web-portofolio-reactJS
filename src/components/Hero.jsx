@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div>
       <section id='home'
-       className="pt-28 lg:pt-36">
+       className="pt-28 lg:pt-30">
         <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
             <div>
                 <div className="flex items-center gap-3">
@@ -28,12 +28,12 @@ const Hero = () => {
                         </span>
                         <TypeIt className="text-blue-400" options={{ 
                                 strings:['Terbuka untuk bekerja'],
-                                cursorChar: "🔥",
-                                speed: 150, 
-                                deleteSpeed: 150, 
+                                cursorChar: "_",
+                                speed: 50, 
+                                deleteSpeed: 50, 
                                 nextStringDelay: 1000, 
                                 loop: true, 
-                                loopDelay: 5500, 
+                                loopDelay: 8500, 
                                        
                          }}/>
                            
@@ -46,7 +46,10 @@ const Hero = () => {
                       strings: ["Welcome to Miftahul Arzaq Portofolio"],
                       speed: 100,
                       waitUntilVisible: true,
-                      cursorChar: ""
+                      cursorChar: "🔥",
+                      afterComplete: (instance) => {
+                        instance.destroy(); // Menghapus efek typing & kursor setelah selesai
+                      },
                                  }}
                                  />
                 </h2>
@@ -61,7 +64,7 @@ const Hero = () => {
             <div className="hidden lg:block">
                 <figure className='w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden'>
                     <img 
-                    src="/images/hero.png"
+                    src="/images/semiformal.png"
                     width={656}
                     height={800}
                     alt="Miftahul Arzaq"
