@@ -14,9 +14,11 @@
     "gsap": "^3.12.7",
     "lenis": "^1.1.20",
     "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwind-scrollbar": "^3.1.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-scrollbar": "^3.1.0",
+    "typeit": "^8.8.7",
+    "typeit-react": "^2.7.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

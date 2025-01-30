@@ -3,6 +3,10 @@ import React from 'react'
 // COMPONENTS
 import {ButtonPrimary, ButtonOutline} from "./Button";
 
+
+// Library typeit
+import TypeIt from "typeit-react";
+
 const Hero = () => {
   return (
     <div>
@@ -22,12 +26,29 @@ const Hero = () => {
                         <span className="relative w-2 h-2 rounded-full bg-emerald-400 ">
                             <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                         </span>
-
-                        Terbuka untuk bekerja
+                        <TypeIt className="text-blue-400" options={{ 
+                                strings:['Terbuka untuk bekerja'],
+                                cursorChar: "🔥",
+                                speed: 150, 
+                                deleteSpeed: 150, 
+                                nextStringDelay: 1000, 
+                                loop: true, 
+                                loopDelay: 5500, 
+                                       
+                         }}/>
+                           
+                        
                     </div>
                 </div>
                 <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10'>
-                    Ayo Mulai bekerja sama dengan saya agar bisnis anda lebih modern
+                <TypeIt
+                      options={{
+                      strings: ["Welcome to Miftahul Arzaq Portofolio"],
+                      speed: 100,
+                      waitUntilVisible: true,
+                      cursorChar: ""
+                                 }}
+                                 />
                 </h2>
                 <div className="flex items-center gap-3">
                     <ButtonPrimary label="Download CV" icon="download"/>
