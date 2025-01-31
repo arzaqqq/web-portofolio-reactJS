@@ -9,7 +9,7 @@ const aboutItems = [
     number: 45 
   },
   { 
-    label: 'Pengalaman kerja', 
+    label: 'tahun pengalaman', 
     number: 4
   }
 ];
@@ -46,7 +46,7 @@ const About = () => {
     <section id='about' className='section' ref={sectionRef}>
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-          <h2 className='mb-5 text-4xl'>Tentang saya</h2>
+          <h2 className='mb-5 text-4xl font-semibold text-zinc-100'>Tentang saya</h2>
           <p className='text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[62ch]'>
           Halo, Nama saya Miftahul Arzaq, saya adalah orang yang sangat aktif belajar 
           berbagai hal yang berhubungan dengan teknologi, saya ahli dalam berbagai hal 

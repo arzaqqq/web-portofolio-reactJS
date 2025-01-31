@@ -7,6 +7,7 @@ const works = [
     {
       imgSrc: '/images/project-1.jpg',
       title: 'Full stack music app',
+      desc:'ini projek bisasa aja tapi keren kok wkwkw',
       tags: ['API', 'MVC', 'Development'],
       projectLink: 'https://musify-5al0.onrender.com/'
     },
@@ -53,18 +54,24 @@ const Work = () => {
             </h2>
 
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-                {works.map(({ imgSrc, title, tags, projectLink}, key) => (
+                {works.map(({ imgSrc, title, desc, tags, projectLink}, key) => (
                    <ProjectCard
                    key={key}
                    imgSrc={imgSrc}
                    title={title}
+                   desc={desc}
                    tags={tags}
                    projectLink={projectLink}
                    className="reveal-up"/>
                 ))}
             </div>
+            <div className="flex justify-center">
+            <button>
+            <a href="/project"
+            className='btn btn-primary mt-5'>
+            Load more</a></button>
+            </div>
         </div>
-      
     </section>
   )
 }

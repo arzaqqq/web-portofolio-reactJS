@@ -126,3 +126,10 @@ body {
 .text-field::placeholder {
   @apply text-zinc-400
 }
+
+
+
+/* ICON WORK PRODUCTCARD */
+.icon-hover{
+  @apply hover:text-white text-zinc-400 transition-colors duration-200
+}
