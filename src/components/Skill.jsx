@@ -3,47 +3,68 @@ import React from 'react'
 import SkillCard from './SkillCard';
 
 const skillItem = [
-    {
-      imgSrc: '/images/figma.svg',
-      label: 'Figma',
-      desc: 'Design tool'
-    },
-    {
-      imgSrc: '/images/css3.svg',
-      label: 'CSS',
-      desc: 'User Interface'
-    },
-    {
-      imgSrc: '/images/javascript.svg',
-      label: 'JavaScript',
-      desc: 'Interaction'
-    },
-    {
-      imgSrc: '/images/nodejs.svg',
-      label: 'NodeJS',
-      desc: 'Web Server'
-    },
-    {
-      imgSrc: '/images/expressjs.svg',
-      label: 'ExpressJS',
-      desc: 'Node Framework'
-    },
-    {
-      imgSrc: '/images/mongodb.svg',
-      label: 'MongoDB',
-      desc: 'Database'
-    },
-    {
-      imgSrc: '/images/react.svg',
-      label: 'React',
-      desc: 'Framework'
-    },
-    {
-      imgSrc: '/images/tailwindcss.svg',
-      label: 'TailwindCSS',
-      desc: 'User Interface'
-    },
-  ];
+  {
+    imgSrc: '/images/figma.svg',
+    label: 'Figma',
+    desc: 'Design tool'
+  },
+  {
+    imgSrc: '/images/html.svg',
+    label: 'HTML',
+    desc: 'Markup Language'
+  },
+  {
+    imgSrc: '/images/css3.svg',
+    label: 'CSS',
+    desc: 'User Interface'
+  },
+  {
+    imgSrc: '/images/tailwindcss.svg',
+    label: 'TailwindCSS',
+    desc: 'User Interface'
+  },
+  {
+    imgSrc: '/images/javascript.svg',
+    label: 'JavaScript',
+    desc: 'Interaction'
+  },
+  {
+    imgSrc: '/images/nodejs.svg',
+    label: 'NodeJS',
+    desc: 'Web Server'
+  },
+  {
+    imgSrc: '/images/react.svg',
+    label: 'React',
+    desc: 'Frontend Library'
+  },
+  {
+    imgSrc: '/images/php.svg',
+    label: 'PHP',
+    desc: 'Server-side Scripting'
+  },
+  {
+    imgSrc: '/images/codeigniter.svg',
+    label: 'CodeIgniter',
+    desc: 'PHP Framework'
+  },
+  {
+    imgSrc: '/images/laravel.svg',
+    label: 'Laravel',
+    desc: 'PHP Framework'
+  },
+  {
+    imgSrc: '/images/python.svg',
+    label: 'Python',
+    desc: 'General-purpose Programming'
+  },
+  {
+    imgSrc: '/images/github.svg',
+    label: 'GitHub',
+    desc: 'Version Control'
+  },
+];
+
 
 const Skill = () => {
   return (

@@ -1,9 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+
+// Library React-Count-up
 import CountUp from 'react-countup';
 
 const aboutItems = [
-  { label: 'Project done', number: 45 },
-  { label: 'Years of experience', number: 10 }
+  { 
+    label: 'Projek selesai', 
+    number: 45 
+  },
+  { 
+    label: 'Pengalaman kerja', 
+    number: 4
+  }
 ];
 
 const About = () => {
@@ -39,8 +47,10 @@ const About = () => {
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
           <h2 className='mb-5 text-4xl'>Tentang saya</h2>
-          <p className='text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]'>
-            Welcome! I&apos;m Henry, a professional web developer with a knack for crafting visually stunning and highly functional websites.
+          <p className='text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[62ch]'>
+          Halo, Nama saya Miftahul Arzaq, saya adalah orang yang sangat aktif belajar 
+          berbagai hal yang berhubungan dengan teknologi, saya ahli dalam berbagai hal 
+          seperti UI/UX, Front-end, Back-end, dan Machine learning.   
           </p>
 
           <div className="flex flex-wrap items-center gap-4 md:gap-7">
