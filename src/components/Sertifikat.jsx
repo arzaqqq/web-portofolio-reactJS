@@ -10,7 +10,7 @@ const certificates = [
     {
         title: 'React Mastery',
         description: 'Awarded for mastering React and building responsive applications.',
-        imgSrc: '/images/certificate-2.jpg',
+        imgSrc: '/images/sertifikat2.jpeg',
     },
     {
         title: 'UX Design Excellence',
@@ -63,7 +63,7 @@ const Sertifikat = () => {
     };
 
     return (
-        <section id="certificates" className="section overflow-hidden">
+        <section id="certificates" className="section1 pt-8 overflow-hidden">
             <div className="container max-w-[1200px] mx-auto px-4">
                 <h2 className="headline-2 mb-8">My Certificates</h2>
                 <div
@@ -85,10 +85,10 @@ const Sertifikat = () => {
                                 alt={title}
                                 className="w-[400px] h-[200px] rounded-lg object-cover"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center text-white p-4 transition-opacity">
+                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-100 group-hover:opacity-0 flex justify-center items-center text-white p-4 transition-opacity duration-300">
                                 <div className="text-center">
-                                    <h3 className="text-xl font-bold">{title}</h3>
-                                    <p className="mt-2 text-sm">{description}</p>
+                                    <h3 className="text-xl font-bold text-white">{title}</h3>
+                                    <p className="mt-2 text-sm text-slate-100">{description}</p>
                                 </div>
                             </div>
                         </div>
@@ -99,13 +99,16 @@ const Sertifikat = () => {
             {/* Modal */}
             {isModalOpen && selectedCertificate && (
                 <Modal onClose={handleCloseModal}>
-                    <img
-                        src={selectedCertificate.imgSrc}
-                        alt={selectedCertificate.title}
-                        className="w-full h-auto rounded-lg"
-                    />
+                    <div className="flex justify-center items-center">
+                        <img
+                            src={selectedCertificate.imgSrc}
+                            alt={selectedCertificate.title}
+                            className="max-w-[500px] max-h-[400px] rounded-lg object-cover"
+                        />
+                    </div>
                 </Modal>
             )}
+
         </section>
     );
 };

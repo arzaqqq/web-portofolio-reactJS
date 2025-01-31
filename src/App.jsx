@@ -52,8 +52,7 @@ function App() {
     <Skill/>
     <Work/>
     <Sertifikat/>
-    <Review/>
-  
+   
     <Contact/>
    </main>
     <Footer/>

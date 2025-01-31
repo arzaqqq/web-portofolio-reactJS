@@ -6,17 +6,25 @@ const Modal = ({ onClose, children }) => {
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
             onClick={onClose}
         >
-            <div
-                className="bg-white p-4 rounded-lg shadow-lg"
-                onClick={(e) => e.stopPropagation()}
-            >
+
+            
+                {/* Tombol Close di Tengah Atas */}
+                <div className="bg-white rounded-lg ">
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-600 font-bold"
+                    className="absolute top-0 mt-20 left-1/2 transform -translate-x-1/2 text-red-600 font-bold z-60 bg-transparent border-none mb-10"
                 >
                     X
                 </button>
-                <div>{children}</div>
+                </div>
+            <div
+                className="bg-opacity-50 p-4 rounded-lg shadow-lg flex items-center justify-center relative"
+                onClick={(e) => e.stopPropagation()}
+            >
+                {/* Konten Modal */}
+                <div className="flex justify-center items-center">
+                    {children}
+                </div>
             </div>
         </div>
     );
