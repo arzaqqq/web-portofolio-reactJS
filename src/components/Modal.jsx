@@ -9,14 +9,14 @@ const Modal = ({ onClose, children }) => {
 
             
                 {/* Tombol Close di Tengah Atas */}
-                <div className="bg-white rounded-lg ">
-                <button
+              
+                    <button
                     onClick={onClose}
                     className="absolute top-0 mt-20 left-1/2 transform -translate-x-1/2 text-red-600 font-bold z-60 bg-transparent border-none mb-10"
                 >
-                    X
+                    
                 </button>
-                </div>
+             
             <div
                 className="bg-opacity-50 p-4 rounded-lg shadow-lg flex items-center justify-center relative"
                 onClick={(e) => e.stopPropagation()}

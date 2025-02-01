@@ -64,7 +64,7 @@ const Sertifikat = () => {
 
     return (
         <section id="certificates" className="section1 pt-8 overflow-hidden">
-            <div className="container max-w-[1200px] mx-auto px-4">
+            <div className="containr max-w-[1450px] mx-auto px-4">
                 <h2 className="headline-2 mb-8">My Certificates</h2>
                 <div
                     ref={scrollRef}
@@ -77,7 +77,7 @@ const Sertifikat = () => {
                     {certificates.map(({ title, description, imgSrc }, index) => (
                         <div
                             key={`${title}-${index}`}
-                            className="min-w-[300px] flex-shrink-0 snap-center relative cursor-pointer group"
+                            className="sm:min-w-[300px]  flex-shrink-0 snap-center relative cursor-pointer group"
                             onClick={() => handleClick({ title, imgSrc })}
                         >
                             <img
@@ -85,10 +85,10 @@ const Sertifikat = () => {
                                 alt={title}
                                 className="w-[400px] h-[200px] rounded-lg object-cover"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-100 group-hover:opacity-0 flex justify-center items-center text-white p-4 transition-opacity duration-300">
+                            <div className="absolute inset-0 bg-white bg-opacity-75 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-500">
                                 <div className="text-center">
-                                    <h3 className="text-xl font-bold text-white">{title}</h3>
-                                    <p className="mt-2 text-sm text-slate-100">{description}</p>
+                                    <h3 className="text-xl font-bold text-black">{title}</h3>
+                                    <p className="mt-2 text-[17px] text-black">{description}</p>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ const Sertifikat = () => {
                         <img
                             src={selectedCertificate.imgSrc}
                             alt={selectedCertificate.title}
-                            className="max-w-[500px] max-h-[400px] rounded-lg object-cover"
+                            className="w-full md:h-[550px] rounded-lg object-cover"
                         />
                     </div>
                 </Modal>
