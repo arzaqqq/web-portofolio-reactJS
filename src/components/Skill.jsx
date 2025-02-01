@@ -87,7 +87,7 @@ const Skill = () => {
                             imgSrc={imgSrc}
                             label={label}
                             desc={desc}
-                            classes="reveal-up"/>
+                           />
                     ))
                 }
             </div>

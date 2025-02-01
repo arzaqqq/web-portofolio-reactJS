@@ -6,7 +6,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
+
+import { Link } from 'react-router-dom';
+
+
+
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 const works = [
   {
@@ -82,7 +89,9 @@ const works = [
 
 
 const Projects = () => {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll ke atas setiap kali halaman dimuat
+  }, []);
   useGSAP(() => {
     const elements = gsap.utils.toArray('.reveal-up');
 
@@ -105,12 +114,12 @@ const Projects = () => {
   }, []);
 
   return (
-    <ReactLenis root>
+    <ReactLenis root classes="reveal-up">
       <section className='section' id='work'>
         <div className="container">
          <div className="flex justify-between">
          <h2 className='headline-2 mb-8 reveal-up'>Portofolio saya</h2>
-          <a href="/" className='btn btn-primary reveal-up'>Back</a>
+          <Link to="/" className='btn btn-primary reveal-up'>Back</Link>
          </div>
           <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
             {works.map(({ imgSrc, title, desc, tags, github, livePreview }, key) => (

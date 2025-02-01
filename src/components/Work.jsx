@@ -3,6 +3,8 @@ import React from 'react'
 // Components
 import ProjectCard from './ProjectCard';
 
+import { Link } from 'react-router-dom';
+
 const works = [
     {
       imgSrc: '/images/project-1.jpg',
@@ -72,9 +74,9 @@ const Work = () => {
             </div>
             <div className="flex justify-center">
             <button>
-            <a href="/project"
+            <Link to="/project"
             className='btn btn-primary mt-5'>
-            Load more</a></button>
+            Load more</Link></button>
             </div>
         </div>
     </section>
