@@ -8,6 +8,7 @@ import Review from './components/Review';
 import Review2 from './components/Sertifikat';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomizedTimeline from './components/Experience';
 
 
 
@@ -30,7 +31,7 @@ function App() {
       gsap.to(element, {
         scrollTrigger:{
           trigger:element,
-          start:'-200 bottom',
+          start:'-100 bottom',
           end:"bottom 80%",
           scrub:true,  
         },
@@ -44,15 +45,15 @@ function App() {
   })
 
   return (
-    <ReactLenis root>
+    <ReactLenis root classes="reveal-up">
     <Header/>
    <main>
     <Hero/>
-    <About/>
+    <About />
     <Skill/>
     <Work/>
     <Sertifikat/>
-   
+     <CustomizedTimeline/>
     <Contact/>
    </main>
     <Footer/>

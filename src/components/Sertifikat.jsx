@@ -85,7 +85,7 @@ const Sertifikat = () => {
                                 alt={title}
                                 className="w-[400px] h-[200px] rounded-lg object-cover"
                             />
-                            <div className="absolute inset-0 bg-white bg-opacity-75 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-500">
+                            <div className="absolute inset-0 bg-white bg-opacity-55 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-500">
                                 <div className="text-center">
                                     <h3 className="text-xl font-bold text-black">{title}</h3>
                                     <p className="mt-2 text-[17px] text-black">{description}</p>

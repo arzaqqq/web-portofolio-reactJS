@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div>
       <section id='home'
-       className="pt-28 lg:pt-30">
+       className="pt-20 lg:pt-30">
         <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
             <div>
                 <div className="flex items-center gap-3">

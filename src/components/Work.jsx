@@ -8,38 +8,42 @@ const works = [
       imgSrc: '/images/project-1.jpg',
       title: 'Full stack music app',
       desc:'ini projek bisasa aja tapi keren kok wkwkw',
-      tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://musify-5al0.onrender.com/'
+      tags: ['API', 'MVC', 'Development', 'PHP' ,'js'],
+      github: 'https://github.com/arzaqqq/',
+      livePreview:'https://kominfo.pesawarankab.go.id/'
     },
     {
       imgSrc: '/images/project-2.jpg',
       title: 'Free stock photo app',
       tags: ['API', 'SPA'],
-      projectLink: 'https://pixstock-official.vercel.app/'
+      github: 'https://pixstock-official.vercel.app/',
+      livePreview:'https://codewithsadee.vercel.app/'
     },
+   
     {
       imgSrc: '/images/project-3.jpg',
       title: 'Recipe app',
       tags: ['Development', 'API'],
-      projectLink: ''
+      github: ''
     },
     {
       imgSrc: '/images/project-4.jpg',
       title: 'Real state website',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee-org/wealthome'
+      github: 'https://github.com/codewithsadee-org/wealthome'
     },
     {
       imgSrc: '/images/project-5.jpg',
       title: 'eCommerce website',
       tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
+      github: 'https://github.com/codewithsadee/anon-ecommerce-website'
     },
     {
       imgSrc: '/images/project-6.jpg',
       title: 'vCard Personal portfolio',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
+      github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
+      livePreview:'https://codewithsadee.vercel.app/'
     },
   ];
 
@@ -54,14 +58,15 @@ const Work = () => {
             </h2>
 
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-                {works.map(({ imgSrc, title, desc, tags, projectLink}, key) => (
+                {works.map(({ imgSrc, title, desc, tags,github, livePreview}, key) => (
                    <ProjectCard
                    key={key}
                    imgSrc={imgSrc}
                    title={title}
                    desc={desc}
                    tags={tags}
-                   projectLink={projectLink}
+                   github={github}
+                   livePreview={livePreview}
                    className="reveal-up"/>
                 ))}
             </div>

@@ -14,7 +14,7 @@ const ProjectCard = ({ imgSrc, title, desc, tags, projectLink, livePreview, gith
         />
         
         {/* Overlay & Icon saat hover */}
-        <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
           {/* Live Preview */}
           <a
             href={livePreview}
@@ -34,14 +34,14 @@ const ProjectCard = ({ imgSrc, title, desc, tags, projectLink, livePreview, gith
             className="flex flex-col items-center justify-center icon-hover"
           >
              <span className="material-symbols-rounded text-3xl">code</span>
-            <span className="text-sm mt-1">GitHub</span>
+            <span className="text-sm mt-1">Code</span>
           </a>
         </div>
       </figure>
 
       {/* Informasi Proyek */}
       <div className="flex items-center justify-between gap-4">
-        <div>
+        <div >
           <h3 className="title-1">{title}</h3>
           <p className='font-thin text-[14px] text-slate-300 my-1'>{desc}</p>
           <div className="flex flex-wrap items-center gap-2">
@@ -53,14 +53,12 @@ const ProjectCard = ({ imgSrc, title, desc, tags, projectLink, livePreview, gith
           </div>
         </div>
 
-        <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950">
-          <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
-        </div>
+        
       </div>
 
       {/* Tautan Proyek */}
-      <a href={projectLink} target="_blank" rel="noopener noreferrer" className="inset-0"></a>
-    </div>
+      <a href={github} target="_blank" rel="noopener noreferrer" className=" absolute inset-0 cursor-pointer z-20"></a>
+    </div> 
   );
 };
 
