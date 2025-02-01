@@ -63,8 +63,8 @@ const Sertifikat = () => {
     };
 
     return (
-        <section id="certificates" className="section1 pt-8 overflow-hidden">
-            <div className="containr max-w-[1450px] mx-auto px-4">
+        <section id="sertifikat" className="section1 pt-32 overflow-hidden">
+            <div className="container max-w-[1450px] mx-auto px-4">
                 <h2 className="headline-2 mb-8">My Certificates</h2>
                 <div
                     ref={scrollRef}

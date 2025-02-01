@@ -69,8 +69,8 @@ const skillItem = [
 const Skill = () => {
   return (
     <div>
-      <section className="section">
-        <div className="container">
+      <section className="section" id='skill'>
+        <div className="container" >
             <h2 className='headline-2 reveal-up'>
                 Berbagai Tools yang saya kuasai
             </h2>

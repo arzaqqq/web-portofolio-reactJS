@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 
 export default function CustomizedTimeline() {
   return (
-    <div className='section container'>
+    <div className='section container' id='experience'>
         <div>
             <h2 className='headline-2'>My Experiences</h2>
         </div>
