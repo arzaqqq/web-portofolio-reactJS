@@ -14,7 +14,7 @@ const Hero = () => {
   useGSAP(() => {
     // Animasi untuk gambar 
     gsap.fromTo(
-      ".hero-image", 
+      ".hero-image, figure.img-boxr", 
       { opacity: 0, y: 50 },  
       { 
         opacity: 1, 
@@ -28,6 +28,22 @@ const Hero = () => {
         }
       }
     );
+
+    gsap.fromTo(
+        ".img-box, .lampu-hijau",  // Animasi untuk img-box
+        { opacity: 0, y: 50 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          duration: 1.5, 
+          ease: "power2.out", 
+          scrollTrigger: {
+            trigger: ".img-box",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          }
+        }
+      );
 
     // Animasi untuk h2 (judul)
     gsap.fromTo(
@@ -80,7 +96,7 @@ const Hero = () => {
                      className='img-cover' />
               </figure>
               <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
-                <span className="relative w-2 h-2 rounded-full bg-emerald-400">
+                <span className="lampu-hijau relative w-2 h-2 rounded-full bg-emerald-400">
                   <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                 </span>
                 <TypeIt className="text-blue-400" options={{ 

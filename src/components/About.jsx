@@ -9,6 +9,10 @@ const aboutItems = [
     number: 45 
   },
   { 
+    label: 'Certificates achieved', 
+    number: 22
+  },
+  { 
     label: 'tahun pengalaman', 
     number: 4
   }
