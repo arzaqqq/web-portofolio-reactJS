@@ -7,32 +7,39 @@ import { Link } from 'react-router-dom';
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
-      title: 'Full stack music app',
-      desc:'ini projek bisasa aja tapi keren kok wkwkw',
-      tags: ['API', 'MVC', 'Development', 'PHP' ,'js'],
-      github: 'https://github.com/arzaqqq/',
-      livePreview:'https://kominfo.pesawarankab.go.id/'
+      imgSrc: '/images/portfolio/portfolio-diskominfo.png',
+      title: 'Website Diskominfo Pesawaran', 
+      desc:'Redesign dan redevelop Website Diskominfo Pesawaran for 4 Months',
+      tags: ['PHP', 'CI', 'Bootstrap', 'JQuery' ,'XAMPP'],
+      github: '',
+      livePreview:'https://kominfo.pesawarankab.go.id/',
+      githubDisabled: true
     },
     {
-      imgSrc: '/images/project-2.jpg',
-      title: 'Free stock photo app',
-      tags: ['API', 'SPA'],
-      github: 'https://pixstock-official.vercel.app/',
-      livePreview:'https://codewithsadee.vercel.app/'
+      imgSrc: '/images/portfolio/potrfolio-simpel.png',
+      title: 'Website Sistem Informasi Penjaminan Mutu Pembelajara',
+      desc:'Develop a Website Sistem Informasi Penjaminan Mutu Pembelajaran for 3 Months as a backend',
+      tags: ['PHP', 'Laravell','Filament', 'Tailwind CSS', 'JQuery' ,'XAMPP'],
+      github: 'https://github.com/arzaqqq/Sistem-Informasi-Penjaminan-Mutu-Pembelajaran',
+      livePreview:'https://mutu.sipil.unimal.ac.id/'
     },
    
     {
-      imgSrc: '/images/project-3.jpg',
-      title: 'Recipe app',
-      tags: ['Development', 'API'],
-      github: ''
+      imgSrc: '/images/portfolio/portfolio-maggotic.png',
+      title: 'Website Maggotic',
+      desc: 'Website Maggotic is website for selling maggot',
+      tags: ['PHP', 'CI', 'Tailwind', 'Jquery'],
+      livePreview: 'https://maggotic.my.id/',
+      github: 'https://github.com/arzaqqq/website-maggotic',
+    
     },
     {
-      imgSrc: '/images/project-4.jpg',
-      title: 'Real state website',
-      tags: ['Web-design', 'Development'],
-      github: 'https://github.com/codewithsadee-org/wealthome'
+      imgSrc: '/images/portfolio/portfolio-klinik-sehat.png',
+      title: 'website Helalt Medical Center',
+      desc: 'website Helalt Medical Center for personal project',
+      tags: ['PHP', 'Laravel', 'Booostrap', 'Jquery'],
+      github: 'https://github.com/codewithsadee-org/wealthome',
+      livePreview: '',
     },
     {
       imgSrc: '/images/project-5.jpg',
@@ -55,10 +62,12 @@ const Work = () => {
     id='work'
     >
         <div className="container">
-            <h2 className='headline-2 mb-8 reveal-up'>
-                Portofolio saya
-            </h2>
-
+        <h2 className='headline-2 mb-3 reveal-up'>
+          Portfolio
+        </h2>
+        <p className='text-zinc-400 mt-1 mb-5 max-w-[50ch] reveal-up'>
+        Explore a curated collection of my work, showcasing the projects and skills I’ve mastered over time.
+            </p>
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
                 {works.map(({ imgSrc, title, desc, tags,github, livePreview}, key) => (
                    <ProjectCard

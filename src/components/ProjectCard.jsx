@@ -44,25 +44,32 @@ const ProjectCard = ({ imgSrc, title, desc, tags, livePreview, github, classes }
         <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40 bg-black/50">
           {/* Live Preview */}
           <a
-            href={livePreview}
+            href={livePreview || "#"}
             target="_blank"
+            style={{
+              cursor: livePreview  ? 'pointer' : 'not-allowed', 
+            }}
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center icon-hover"
           >
-            <span className="material-symbols-rounded text-3xl text-white">visibility</span>
-            <span className="text-sm mt-1 text-white">Live Preview</span>
+            <span className="material-symbols-rounded text-3xl text-white icon-hover ">visibility</span>
+            <span className="text-sm mt-1 text-white ">Live Preview</span>
           </a>
 
           {/* GitHub */}
           <a
-            href={github}
+            href={github || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center icon-hover"
+            style={{
+              cursor: github ? 'pointer' : 'not-allowed', 
+            }}
+            className={`flex flex-col items-center justify-center ${github ? 'github-link' : 'disabled-link'}`}
           >
-            <span className="material-symbols-rounded text-3xl text-white">code</span>
+            <span className="material-symbols-rounded text-3xl text-white icon-hover">code</span>
             <span className="text-sm mt-1 text-white">Code</span>
           </a>
+
         </div>
       </figure>
 
@@ -72,7 +79,7 @@ const ProjectCard = ({ imgSrc, title, desc, tags, livePreview, github, classes }
         <p className="text-sm text-zinc-400 my-1">{desc}</p>
         <div className="flex flex-wrap items-center gap-2">
           {tags.map((label, key) => (
-            <span key={key} className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg">
+            <span key={key} className="h-8 text-sm text-sky-500 bg-zinc-50/5 peer-hover:bg-slate-500 grid items-center px-3 rounded-lg">
               {label}
             </span>
           ))}

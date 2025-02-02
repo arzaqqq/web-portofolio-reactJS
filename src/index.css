@@ -131,7 +131,7 @@ body {
 
 /* ICON WORK PRODUCTCARD */
 .icon-hover{
-  @apply hover:text-sky-400 text-zinc-300 transition-colors duration-200
+  @apply hover:text-sky-400 text-zinc-300 transition-colors duration-200 z-50
 }
 
 

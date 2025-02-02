@@ -100,7 +100,7 @@ const Hero = () => {
                   <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                 </span>
                 <TypeIt className="text-blue-400" options={{ 
-                  strings:['Terbuka untuk bekerja'],
+                  strings:['Open to work!, Ready for any job!'],
                   cursorChar: "_",
                   speed: 100, 
                   deleteSpeed: 100, 
@@ -116,22 +116,23 @@ const Hero = () => {
             </h2>
 
             <div className="hero-buttons flex items-center gap-3">
-              <ButtonPrimary label="Download CV" icon="download"/>
+              <ButtonPrimary label="Download CV" icon="download" href={'/file/cv.pdf' } target="_blank"/>
               <ButtonOutline href="#about" label='scroll down' icon="arrow_downward" />
             </div>
           </div>
 
           {/* Gambar dengan animasi fade-in */}
           <div className="hidden lg:block">
-            <figure className="hero-image w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
-              <img 
-                src="/images/semiformal.png"
-                width={656}
-                height={800}
-                alt="Miftahul Arzaq"
-                className='w-full'
-              />
-            </figure>
+          <figure className="hero-image group w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
+  <img 
+    src="/images/semiformal.png"
+    width={656}
+    height={800}
+    alt="Miftahul Arzaq"
+    className="w-full grayscale transition-all duration-500 group-hover:grayscale-0"
+  />
+</figure>
+
           </div>
 
         </div>

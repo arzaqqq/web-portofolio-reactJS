@@ -12,12 +12,20 @@ const sitemap = [
       href: '#about'
     },
     {
-      label: 'Work',
+      label: 'Skill',
+      href: '#skill'
+    },
+    {
+      label: 'Potrfolio',
       href: '#work'
     },
     {
-      label: 'Reviews',
-      href: '#reviews'
+      label: 'Achievement',
+      href: '#certificate'
+    },
+    {
+      label: 'Experience',
+      href: '#experience'
     },
     {
       label: 'Contact me',

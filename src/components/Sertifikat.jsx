@@ -3,14 +3,14 @@ import Modal from './Modal'; // Ensure you have a modal component
 
 const certificates = [
     {
-        title: 'Web Development Expert',
-        description: 'A certificate awarded for exceptional web development skills.',
-        imgSrc: '/images/sertifikat.jpeg',
+        title: 'Event committee',
+        description: 'Social Contribution in the Nusantara Module of PMM 3',
+        imgSrc: '/images/sertifikat/sertifikat-kontribusi-sosial.jpeg',
     },
     {
-        title: 'React Mastery',
-        description: 'Awarded for mastering React and building responsive applications.',
-        imgSrc: '/images/sertifikat2.jpeg',
+        title: 'Student exchange',
+        description: 'Student exchange at UNIKOM Bandung for 1 semester in 2023',
+        imgSrc: '/images/sertifikat/sertifikat-pmm3.jpeg',
     },
     {
         title: 'UX Design Excellence',
@@ -65,7 +65,7 @@ const Sertifikat = () => {
     return (
         <section id="sertifikat" className="section1 pt-32 overflow-hidden">
             <div className="container max-w-[1450px] mx-auto px-4">
-                <h2 className="headline-2 mb-8">My Certificates</h2>
+                <h2 className="headline-2 mb-8">Achievement</h2>
                 <div
                     ref={scrollRef}
                     className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden cursor-grab active:cursor-grabbing"
