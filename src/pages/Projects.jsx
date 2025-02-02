@@ -17,73 +17,79 @@ gsap.registerPlugin(ScrollTrigger);
 
 const works = [
   {
-    imgSrc: '/images/project-1.jpg',
-    title: 'Full stack music app',
-    desc:'ini projek bisasa aja tapi keren kok wkwkw',
-    tags: ['API', 'MVC', 'Development', 'PHP' ,'js'],
-    github: 'https://github.com/arzaqqq/',
-    livePreview:'https://kominfo.pesawarankab.go.id/'
+    imgSrc: '/images/portfolio/portfolio-diskominfo.png',
+    title: 'Website Diskominfo Pesawaran', 
+    desc:'Redesign dan redevelop Website Diskominfo Pesawaran for 4 Months',
+    tags: ['PHP', 'CI', 'Bootstrap', 'JQuery' ,'XAMPP'],
+    github: '',
+    livePreview:'https://kominfo.pesawarankab.go.id/',
+    githubDisabled: true
   },
   {
-    imgSrc: '/images/project-2.jpg',
-    title: 'Free stock photo app',
-    tags: ['API', 'SPA'],
-    github: 'https://pixstock-official.vercel.app/',
-    livePreview:'https://codewithsadee.vercel.app/'
+    imgSrc: '/images/portfolio/potrfolio-simpel.png',
+    title: 'Website Sistem Informasi Penjaminan Mutu Pembelajara',
+    desc:'Develop a Website Sistem Informasi Penjaminan Mutu Pembelajaran for 3 Months as a backend',
+    tags: ['PHP', 'Laravell','Filament', 'Tailwind CSS', 'JQuery' ,'XAMPP'],
+    github: 'https://github.com/arzaqqq/Sistem-Informasi-Penjaminan-Mutu-Pembelajaran',
+    livePreview:'https://mutu.sipil.unimal.ac.id/'
   },
  
   {
-    imgSrc: '/images/project-3.jpg',
-    title: 'Recipe app',
-    tags: ['Development', 'API'],
-    github: ''
+    imgSrc: '/images/portfolio/portfolio-maggotic.png',
+    title: 'Website Maggotic',
+    desc: 'Website Maggotic is website for selling maggot',
+    tags: ['PHP', 'CI', 'Tailwind', 'Jquery'],
+    livePreview: 'https://maggotic.my.id/',
+    github: 'https://github.com/arzaqqq/website-maggotic',
+  
   },
   {
-    imgSrc: '/images/project-4.jpg',
-    title: 'Real state website',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee-org/wealthome'
+    imgSrc: '/images/portfolio/portfolio-klinik-sehat.png',
+    title: 'website Healt Medical Center',
+    desc: 'website Healt Medical Center for personal project',
+    tags: ['PHP', 'Laravel', 'Booostrap', 'Jquery'],
+    github: 'https://github.com/codewithsadee-org/wealthome',
+    livePreview: '',
   },
   {
-    imgSrc: '/images/project-5.jpg',
-    title: 'eCommerce website',
-    tags: ['eCommerce', 'Development'],
-    github: 'https://github.com/codewithsadee/anon-ecommerce-website'
+    imgSrc: '/images/portfolio/portfolio-admin-kasir.png',
+    title: 'Cashier Dashboard',
+    desc: 'Cashier Dashboard for personal project',
+    tags: ['Laravel', 'PHP', 'Booostrap', 'Jquery'],
+    github: 'https://github.com/arzaqqq/kasir-filament-laravel',
+    livePreview: '',
   },
   {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
-    livePreview:'https://codewithsadee.vercel.app/'
+    imgSrc: '/images/portfolio/portfolio-mobile-diet.png',
+    title: 'Mobile Diet App',
+    desc: 'Mobile Diet App for a team project in the Mobile Programming subject.',
+    tags: ['Java', 'Android Studio'],
+    github: 'https://github.com/Mazoelian/DietMobile.git',
+    livePreview:''
   },
   {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
-    livePreview:'https://codewithsadee.vercel.app/'
+    imgSrc: '/images/portfolio/portfolio-mobile-game-education.png',
+    title: 'Mobile Game education App',
+    desc: 'Mobile Game education App for a team project in the fianl project in Mobile Programming subject.',
+    tags: ['Kotlin', 'Android Studio'],
+    github: 'https://github.com/Mazoelian/Game-Edukasi-Mobile',
+    livePreview:''
   },
   {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
-    livePreview:'https://codewithsadee.vercel.app/'
+    imgSrc: '/images/portfolio/portfolio-figma-mobileeducation.png',
+    title: 'Design Education App Mobile',
+    desc: 'Design Education App Mobile for a test intership as UI/UX Desaigner.',
+    tags: ['UI UX', 'Figma', 'Mobile'],
+    github: '',
+    livePreview:'https://www.figma.com/proto/e4AZmz95Ny0yXNpIvs6TI9/video-pembelajaran?node-id=3-2&t=uLD4T9izByyBM6c4-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A5&show-proto-sidebar=1'
   },
   {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
-    livePreview:'https://codewithsadee.vercel.app/'
-  },
-  {
-    imgSrc: '/images/project-6.jpg',
-    title: 'vCard Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    github: 'https://github.com/codewithsadee/vcard-personal-portfolio',
-    livePreview:'https://codewithsadee.vercel.app/'
+    imgSrc: '/images/portfolio/portfolio-figma-ecommerceweb.png',
+    title: 'Design E-Commerce web',
+    desc: 'Design E-Commerce web for client as freelancer.',
+    tags: ['UI UX', 'Figma', 'Website'],
+    github: '',
+    livePreview:'https://www.figma.com/proto/9IwYDfQTSzptS22dThfp7t/e-commerse?node-id=2313-19&t=qHdjRp5xFwPC9IO1-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2711%3A321'
   },
 ];
 

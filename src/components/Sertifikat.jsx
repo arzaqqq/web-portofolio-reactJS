@@ -3,6 +3,49 @@ import Modal from './Modal'; // Ensure you have a modal component
 
 const certificates = [
     {
+        title: 'Intership as Full stack developer',
+        description: 'Achieved for completing Intership as Full stack developer in Diskominfo Pesawaran.',
+        imgSrc: '/images/sertifikat/sertifikat-magang-diskominfo.png',
+    },
+    {
+        title: 'Front-end Fundamental',
+        description: 'Achieved for completing the AI Fundamental course by Coding Studio.',
+        imgSrc: '/images/sertifikat/sertifikat-codingstudio-fe.png',
+    },
+    {
+        title: 'Java Script Fundamental',
+        description: 'Finish the Java Script Fundamental course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-js.png',
+    },
+    {
+        title: 'Back-end JS Beginnner',
+        description: 'Achieved for completing the Back-end JS Fundamental as  course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-be.png',
+    },
+    {
+        title: 'AI Fundamental',
+        description: 'Achieved for completing the AI Fundamental course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-ai.png',
+    },
+    
+    {
+        title: 'SQL Fundamental',
+        description: 'Achieved for completing the SQL Fundamental course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-sql.png',
+    },
+    {
+        title: 'AWS Cloud Fundamental',
+        description: 'Achieved for completing the AWS Cloud Fundamental course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-awscloud.png',
+    },
+    
+    {
+        title: 'Kotlin Fundamental',
+        description: 'Achieved for completing the Kotlin Fundamental course by Dicoding.',
+        imgSrc: '/images/sertifikat/sertifikat-dicoding-awscloud.png',
+    },
+    
+    {
         title: 'Event committee',
         description: 'Social Contribution in the Nusantara Module of PMM 3',
         imgSrc: '/images/sertifikat/sertifikat-kontribusi-sosial.jpeg',
@@ -12,17 +55,6 @@ const certificates = [
         description: 'Student exchange at UNIKOM Bandung for 1 semester in 2023',
         imgSrc: '/images/sertifikat/sertifikat-pmm3.jpeg',
     },
-    {
-        title: 'UX Design Excellence',
-        description: 'Recognized for creating intuitive and user-friendly designs.',
-        imgSrc: '/images/certificate-3.jpg',
-    },
-    {
-        title: 'Full Stack Developer',
-        description: 'Achieved for completing full stack development projects with solid backend and frontend integration.',
-        imgSrc: '/images/certificate-4.jpg',
-    },
-    // Add more certificates as needed
 ];
 
 const Sertifikat = () => {
@@ -85,10 +117,10 @@ const Sertifikat = () => {
                                 alt={title}
                                 className="w-[400px] h-[200px] rounded-lg object-cover"
                             />
-                            <div className="absolute inset-0 bg-white bg-opacity-55 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-500">
+                            <div className="absolute inset-0 bg-black bg-opacity-70 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-700">
                                 <div className="text-center">
-                                    <h3 className="text-xl font-bold text-black">{title}</h3>
-                                    <p className="mt-2 text-[17px] text-black">{description}</p>
+                                    <h3 className="text-xl font-bold text-white">{title}</h3>
+                                    <p className="mt-2 text-[17px] text-white">{description}</p>
                                 </div>
                             </div>
                         </div>
