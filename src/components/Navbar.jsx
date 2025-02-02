@@ -32,8 +32,8 @@ const Navbar = ({ navOpen }) => {
     { label: 'Skill', link: '#skill', className: 'nav-link' },
     { label: 'Portfolio', link: '#work', className: 'nav-link' },
     { label: 'Achievement', link: '#sertifikat', className: 'nav-link' },
-    { label: 'Contact', link: '#contact', className: 'nav-link md:hidden' },
     { label: 'Experience', link: '#experience', className: 'nav-link' },
+    { label: 'Contact', link: '#contact', className: 'nav-link md:hidden' },
   ];
 
   return (
