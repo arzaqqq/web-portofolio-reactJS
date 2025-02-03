@@ -42,7 +42,7 @@ export default function CustomizedTimeline() {
   return (
     <div className="section container" id="experience">
       <div>
-        <h2 className="headline-2 text-center reveal-up">My Experiences</h2>
+        <h2 className="headline-2 reveal-up">My Experiences</h2>
       </div>
       <Timeline position="alternate">
         {/* INTERNSHIP */}
