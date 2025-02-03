@@ -1,98 +1,122 @@
-import React from 'react'
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // MATERIAL UI
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import BusinessIcon from '@mui/icons-material/Business';
-import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import Typography from '@mui/material/Typography';
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import BusinessIcon from "@mui/icons-material/Business";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import Typography from "@mui/material/Typography";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function CustomizedTimeline() {
+  const timelineRefs = useRef([]);
+
+  useEffect(() => {
+    gsap.fromTo(
+      timelineRefs.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "elastic.out",
+        scrollTrigger: {
+          trigger: "#experience",
+          start: "top 100%",
+          end: "bottom 60%",
+          toggleActions: "play pause none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className='section container' id='experience'>
-        <div>
-            <h2 className='headline-2'>My Experiences</h2>
-        </div>
-        <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          align="right"
-          variant="body2"
-          color="text.blue"
-          className="text-lg font-semibold text-zinc-400 hover:text-blue-400"
-        >
-          Februari - Juni 2024
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector sx={{ height: "30px" }} />
-          <TimelineDot sx={{width: {sm:45, md:75}, height: {sm:45, md:75}, backgroundColor: 'green', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <BusinessIcon sx={{width: {sm:25, md:40}, height: {sm:25, md:40},}}/>
-          </TimelineDot>
-          <TimelineConnector sx={{ height: "30px" }}  />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '20px', px: 2, m: 'auto 0' }}>
-          <Typography variant="h6" component="span">
-            Intership Full Stack Developer
-          </Typography>
-          <Typography className='text-zinc-400'>Diskominfo Pesawaran</Typography>
-        </TimelineContent>
-      </TimelineItem>
+    <div className="section container" id="experience">
+      <div>
+        <h2 className="headline-2 text-center reveal-up">My Experiences</h2>
+      </div>
+      <Timeline position="alternate">
+        {/* INTERNSHIP */}
+        <TimelineItem ref={(el) => (timelineRefs.current[0] = el)}>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.blue"
+            className="text-lg font-semibold text-zinc-400 hover:text-blue-400"
+          >
+            February – June 2024
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ height: "30px" }} />
+            <TimelineDot
+              sx={{
+                width: { sm: 45, md: 75 },
+                height: { sm: 45, md: 75 },
+                backgroundColor: "green",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <BusinessIcon sx={{ width: { sm: 25, md: 40 }, height: { sm: 25, md: 40 } }} />
+            </TimelineDot>
+            <TimelineConnector sx={{ height: "30px" }} />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "20px", px: 2, m: "auto 0" }}>
+            <Typography variant="h6" component="span">
+              Internship Full Stack Developer
+            </Typography>
+            <Typography className="text-zinc-400">Diskominfo Pesawaran, Lampung</Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          className='text-zinc-400'
-        >
-          September - Desember 2024
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot 
+        {/* FIELD WORK PRACTICE */}
+        <TimelineItem ref={(el) => (timelineRefs.current[1] = el)}>
+          <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body2" className="text-zinc-400">
+            September - December 2024
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot
               color="primary"
-              sx={{width: {sm:45, md:75}, height: {sm:45, md:75},display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <LaptopMacIcon sx={{width: {sm:25, md:40}, height: {sm:25, md:40},}}/>
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Kerja Praktik 
-          </Typography>
-          <Typography className='text-zinc-400'>Teknik sipil Universitas Malikussaleh</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ minHeight: "10px" }}> {/* Sesuaikan tinggi item */}
-  <TimelineSeparator>
-    <TimelineConnector sx={{ height: "50px" }} /> {/* Atur tinggi garis */}
-  </TimelineSeparator>
-  <TimelineContent sx={{ py: '12px', px: 2 }}>
-    {/* Konten di sini */}
-  </TimelineContent>
-</TimelineItem>
+              sx={{
+                width: { sm: 45, md: 75 },
+                height: { sm: 45, md: 75 },
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <LaptopMacIcon sx={{ width: { sm: 25, md: 40 }, height: { sm: 25, md: 40 } }} />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Field Work Practice
+            </Typography>
+            <Typography className="text-zinc-400">Civil Engineering, Malikussaleh University</Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-      
-    </Timeline>
+        {/* SPACER */}
+        <TimelineItem ref={(el) => (timelineRefs.current[2] = el)} sx={{ minHeight: "10px" }}>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ height: "50px" }} />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }} />
+        </TimelineItem>
+      </Timeline>
     </div>
   );
 }
-
-const Experience = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-

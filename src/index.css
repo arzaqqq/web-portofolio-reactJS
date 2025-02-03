@@ -79,12 +79,12 @@ body {
 }
 
 .nav-link {
-  @apply grid items-center h-9 lg:px-4 sm:px-2  text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors 
+  @apply grid items-center h-9 lg:px-4 sm:px-2 px-2 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors 
 }
 
 
 .nav-link.active {
-  @apply text-zinc-900 px-2 sm:px-0 md:text-white duration-500 
+  @apply text-zinc-900   md:text-white duration-500 
 }
 
 .navbar .active-box {

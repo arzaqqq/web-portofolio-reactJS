@@ -116,7 +116,7 @@ const Footer = () => {
                      alt="logo" />
                 </a>
                 <p className='text-zinc-500 text-sm'>
-                    @copy; 2025 <span className='text-zinc-200'>Miftahularzaq</span>
+                    @copy;  2025 <span className='text-zinc-200'>Miftahularzaq</span>
                 </p>
             </div>
 

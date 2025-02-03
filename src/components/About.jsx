@@ -50,7 +50,7 @@ const About = () => {
     <section id='about' className='section' ref={sectionRef}>
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-          <h2 className='mb-5 text-4xl font-semibold text-zinc-100'>About Me</h2>
+          <h2 className='mb-5 md:text-4xl  text-2xl font-semibold text-zinc-100'>About Me</h2>
           <p className='text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[62ch]'>
             Hello, my name is Miftahul Arzaq. I am someone who is very active in learning 
             various things related to technology. I am skilled in various fields such as 

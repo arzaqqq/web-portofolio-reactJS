@@ -1,88 +1,89 @@
-import React, { useState, useRef } from 'react';
-import Modal from './Modal'; // Ensure you have a modal component
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Modal from "./Modal"; // Ensure you have a modal component
+
+gsap.registerPlugin(ScrollTrigger);
 
 const certificates = [
     {
-        title: 'Intership as Full stack developer',
-        description: 'Achieved for completing Intership as Full stack developer in Diskominfo Pesawaran.',
-        imgSrc: '/images/sertifikat/sertifikat-magang-diskominfo.png',
+        title: "Internship as Full Stack Developer",
+        description: "Achieved for completing Internship as Full Stack Developer in Diskominfo Pesawaran.",
+        imgSrc: "/images/sertifikat/sertifikat-magang-diskominfo.png",
     },
     {
-        title: 'Front-end Fundamental',
-        description: 'Achieved for completing the AI Fundamental course by Coding Studio.',
-        imgSrc: '/images/sertifikat/sertifikat-codingstudio-fe.png',
+        title: "Front-end Fundamental",
+        description: "Achieved for completing the AI Fundamental course by Coding Studio.",
+        imgSrc: "/images/sertifikat/sertifikat-codingstudio-fe.png",
     },
     {
-        title: 'Java Script Fundamental',
-        description: 'Finish the Java Script Fundamental course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-js.png',
+        title: "JavaScript Fundamental",
+        description: "Finished the JavaScript Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-js.png",
     },
     {
-        title: 'Back-end JS Beginnner',
-        description: 'Achieved for completing the Back-end JS Fundamental as  course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-be.png',
+        title: "Back-end JS Beginner",
+        description: "Achieved for completing the Back-end JS Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-be.png",
     },
     {
-        title: 'AI Fundamental',
-        description: 'Achieved for completing the AI Fundamental course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-ai.png',
-    },
-    
-    {
-        title: 'SQL Fundamental',
-        description: 'Achieved for completing the SQL Fundamental course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-sql.png',
+        title: "AI Fundamental",
+        description: "Achieved for completing the AI Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-ai.png",
     },
     {
-        title: 'AWS Cloud Fundamental',
-        description: 'Achieved for completing the AWS Cloud Fundamental course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-awscloud.png',
-    },
-    
-    {
-        title: 'Kotlin Fundamental',
-        description: 'Achieved for completing the Kotlin Fundamental course by Dicoding.',
-        imgSrc: '/images/sertifikat/sertifikat-dicoding-awscloud.png',
-    },
-    
-    {
-        title: 'Event committee',
-        description: 'Social Contribution in the Nusantara Module of PMM 3',
-        imgSrc: '/images/sertifikat/sertifikat-kontribusi-sosial.jpeg',
+        title: "SQL Fundamental",
+        description: "Achieved for completing the SQL Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-sql.png",
     },
     {
-        title: 'Student exchange',
-        description: 'Student exchange at UNIKOM Bandung for 1 semester in 2023',
-        imgSrc: '/images/sertifikat/sertifikat-pmm3.jpeg',
+        title: "AWS Cloud Fundamental",
+        description: "Achieved for completing the AWS Cloud Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-awscloud.png",
+    },
+    {
+        title: "Kotlin Fundamental",
+        description: "Achieved for completing the Kotlin Fundamental course by Dicoding.",
+        imgSrc: "/images/sertifikat/sertifikat-dicoding-kotlin.png",
+    },
+    {
+        title: "Event Committee",
+        description: "Social Contribution in the Nusantara Module of PMM 3",
+        imgSrc: "/images/sertifikat/sertifikat-kontribusi-sosial.jpeg",
+    },
+    {
+        title: "Student Exchange",
+        description: "Student exchange at UNIKOM Bandung for 1 semester in 2023",
+        imgSrc: "/images/sertifikat/sertifikat-pmm3.jpeg",
     },
 ];
 
 const Sertifikat = () => {
-    const scrollRef = useRef(null); // Reference for the scroll container
+    const scrollRef = useRef(null);
+    const cardRefs = useRef([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCertificate, setSelectedCertificate] = useState(null);
 
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-
-    const handleMouseDown = (e) => {
-        setIsDragging(true);
-        setStartX(e.pageX - scrollRef.current.offsetLeft);
-        setScrollLeft(scrollRef.current.scrollLeft);
-    };
-
-    const handleMouseMove = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - scrollRef.current.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed
-        scrollRef.current.scrollLeft = scrollLeft - walk;
-    };
-
-    const handleMouseUp = () => {
-        setIsDragging(false);
-    };
+    useEffect(() => {
+        if (cardRefs.current) {
+            gsap.fromTo(
+                cardRefs.current,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: scrollRef.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        }
+    }, []);
 
     const handleClick = (certificate) => {
         setSelectedCertificate(certificate);
@@ -97,25 +98,22 @@ const Sertifikat = () => {
     return (
         <section id="sertifikat" className="section1 pt-32 overflow-hidden">
             <div className="container max-w-[1450px] mx-auto px-4">
-                <h2 className="headline-2 mb-8">Achievement</h2>
+                <h2 className="headline-2 mb-8 reveal-up">Achievement</h2>
                 <div
                     ref={scrollRef}
-                    className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden cursor-grab active:cursor-grabbing"
-                    onMouseDown={handleMouseDown}
-                    onMouseLeave={handleMouseUp}
-                    onMouseUp={handleMouseUp}
-                    onMouseMove={handleMouseMove}
+                    className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden cursor-grab active:cursor-grabbing "
                 >
                     {certificates.map(({ title, description, imgSrc }, index) => (
                         <div
                             key={`${title}-${index}`}
-                            className="sm:min-w-[300px]  flex-shrink-0 snap-center relative cursor-pointer group"
+                            ref={(el) => (cardRefs.current[index] = el)}
+                            className="sm:min-w-[300px] flex-shrink-0 snap-center relative cursor-pointer group transform transition-all duration-500 hover:scale-105"
                             onClick={() => handleClick({ title, imgSrc })}
                         >
                             <img
                                 src={imgSrc}
                                 alt={title}
-                                className="w-[400px] h-[200px] rounded-lg object-cover"
+                                className="w-[400px] h-[200px] rounded-lg object-cover shadow-lg"
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-70 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-700">
                                 <div className="text-center">
@@ -140,7 +138,6 @@ const Sertifikat = () => {
                     </div>
                 </Modal>
             )}
-
         </section>
     );
 };
