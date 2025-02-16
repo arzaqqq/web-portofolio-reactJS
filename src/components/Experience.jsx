@@ -99,7 +99,7 @@ export default function CustomizedTimeline() {
             >
               <LaptopMacIcon sx={{ width: { xs: 25, md: 40 }, height: { xs: 25, md: 40 } }} />
             </TimelineDot>
-            <TimelineConnector sx={{ height: "50px" }}/>
+            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
