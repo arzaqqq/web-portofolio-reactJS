@@ -57,7 +57,7 @@ export default function CustomizedTimeline() {
             February – June 2024
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector sx={{ height: "50px" }} />
+            <TimelineConnector sx={{ height: "70px" }} />
             <TimelineDot
               sx={{
                 width: {xs:50,  md: 75 },
