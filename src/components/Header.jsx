@@ -16,12 +16,11 @@ const Header = () => {
                 <div className=''>
                     <a href="/" className='logo '>
                         <img 
-                            src="/images/logo-nav.png"
-                            width={190}
-                            height={190}
+                            src="/images/logo-nav2.png"
+                            width={100}
+                            height={100}
                             alt="Miftahul Arzaq"
                         />
-                      
                     </a>
                 </div>
                 <div className='relative md:justify-self-end'>

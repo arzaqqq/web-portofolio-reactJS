@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Modal from "./Modal"; // Ensure you have a modal component
+import Modal from "./Modal"; // Pastikan Anda memiliki komponen modal
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,34 +95,77 @@ const Sertifikat = () => {
         setSelectedCertificate(null);
     };
 
+    // Fungsi untuk scroll ke kiri
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({
+                left: -410, // Sesuaikan jarak scroll
+                behavior: "smooth",
+            });
+        }
+    };
+
+    // Fungsi untuk scroll ke kanan
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({
+                left: 410, // Sesuaikan jarak scroll
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
-        <section id="sertifikat" className="section1 pt-32 overflow-hidden">
+        <section id="sertifikat" className="section1 pt-32 overflow-hidden relative">
             <div className="container max-w-[1450px] mx-auto px-4">
                 <h2 className="headline-2 mb-8 reveal-up">Achievement</h2>
-                <div
-                    ref={scrollRef}
-                    className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden cursor-grab active:cursor-grabbing "
-                >
-                    {certificates.map(({ title, description, imgSrc }, index) => (
-                        <div
-                            key={`${title}-${index}`}
-                            ref={(el) => (cardRefs.current[index] = el)}
-                            className="sm:min-w-[300px] flex-shrink-0 snap-center relative cursor-pointer group transform transition-all duration-500 hover:scale-105"
-                            onClick={() => handleClick({ title, imgSrc })}
-                        >
-                            <img
-                                src={imgSrc}
-                                alt={title}
-                                className="w-[400px] h-[200px] rounded-lg object-cover shadow-lg"
-                            />
-                            <div className="absolute inset-0 bg-black bg-opacity-70 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-700">
-                                <div className="text-center">
-                                    <h3 className="text-xl font-bold text-white">{title}</h3>
-                                    <p className="mt-2 text-[17px] text-white">{description}</p>
+
+                {/* Container Kartu dengan Tombol Scroll */}
+                <div className="relative">
+                    {/* Tombol Scroll Kiri */}
+                    <button
+                        onClick={scrollLeft}
+                        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 transition-all"
+                        aria-label="Scroll left"
+                    >
+                        &#10094; {/* Ikon panah kiri */}
+                    </button>
+
+                    {/* Container Kartu */}
+                    <div
+                        ref={scrollRef}
+                        className="flex items-stretch gap-3 w-full overflow-x-auto scrollbar-hidden cursor-grab active:cursor-grabbing"
+                    >
+                        {certificates.map(({ title, description, imgSrc }, index) => (
+                            <div
+                                key={`${title}-${index}`}
+                                ref={(el) => (cardRefs.current[index] = el)}
+                                className="sm:min-w-[300px] flex-shrink-0 snap-center relative cursor-pointer group transform transition-all duration-500 hover:scale-105"
+                                onClick={() => handleClick({ title, imgSrc })}
+                            >
+                                <img
+                                    src={imgSrc}
+                                    alt={title}
+                                    className="w-[400px] h-[200px] rounded-lg object-cover shadow-lg"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-100 group-hover:opacity-0 flex justify-center items-center text-black p-4 transition-opacity duration-700">
+                                    <div className="text-center">
+                                        <h3 className="text-xl font-bold text-white">{title}</h3>
+                                        <p className="mt-2 text-[17px] text-white">{description}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
+                    {/* Tombol Scroll Kanan */}
+                    <button
+                        onClick={scrollRight}
+                        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 transition-all"
+                        aria-label="Scroll right"
+                    >
+                        &#10095; {/* Ikon panah kanan */}
+                    </button>
                 </div>
             </div>
 

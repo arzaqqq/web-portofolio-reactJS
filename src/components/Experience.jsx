@@ -28,10 +28,10 @@ export default function CustomizedTimeline() {
         y: 0,
         duration: 1,
         stagger: 0.2,
-        ease: "elastic.out",
+        ease: "power2.out",
         scrollTrigger: {
           trigger: "#experience",
-          start: "top 100%",
+          start: "top 90%",
           end: "bottom 60%",
           toggleActions: "play pause none reverse",
         },
@@ -42,11 +42,11 @@ export default function CustomizedTimeline() {
   return (
     <div className="section container" id="experience">
       <div>
-        <h2 className="headline-2 reveal-up">My Experiences</h2>
+        <h2 className="headline-2 reveal-up mb-6">My Experiences</h2>
       </div>
-      <Timeline position="alternate">
+      <Timeline position="alternate" >
         {/* INTERNSHIP */}
-        <TimelineItem ref={(el) => (timelineRefs.current[0] = el)}>
+        <TimelineItem ref={(el) => (timelineRefs.current[0] = el)} >
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
             align="right"
@@ -57,20 +57,20 @@ export default function CustomizedTimeline() {
             February – June 2024
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector sx={{ height: "30px" }} />
+            <TimelineConnector sx={{ height: "50px" }} />
             <TimelineDot
               sx={{
-                width: { sm: 45, md: 75 },
-                height: { sm: 45, md: 75 },
+                width: {xs:50,  md: 75 },
+                height: {xs:50,  md: 75 },
                 backgroundColor: "green",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <BusinessIcon sx={{ width: { sm: 25, md: 40 }, height: { sm: 25, md: 40 } }} />
+              <BusinessIcon sx={{ width: { xs: 30, md: 40 }, height: { xs:30, md: 40 } }} />
             </TimelineDot>
-            <TimelineConnector sx={{ height: "30px" }} />
+            <TimelineConnector sx={{ height: "50px" }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "20px", px: 2, m: "auto 0" }}>
             <Typography variant="h6" component="span">
@@ -90,16 +90,16 @@ export default function CustomizedTimeline() {
             <TimelineDot
               color="primary"
               sx={{
-                width: { sm: 45, md: 75 },
-                height: { sm: 45, md: 75 },
+                width: {xs:50,  md: 75 },
+                height: {xs:50,  md: 75 },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <LaptopMacIcon sx={{ width: { sm: 25, md: 40 }, height: { sm: 25, md: 40 } }} />
+              <LaptopMacIcon sx={{ width: { xs: 25, md: 40 }, height: { xs: 25, md: 40 } }} />
             </TimelineDot>
-            <TimelineConnector />
+            <TimelineConnector sx={{ height: "50px" }}/>
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
@@ -109,13 +109,7 @@ export default function CustomizedTimeline() {
           </TimelineContent>
         </TimelineItem>
 
-        {/* SPACER */}
-        <TimelineItem ref={(el) => (timelineRefs.current[2] = el)} sx={{ minHeight: "10px" }}>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ height: "50px" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }} />
-        </TimelineItem>
+        
       </Timeline>
     </div>
   );

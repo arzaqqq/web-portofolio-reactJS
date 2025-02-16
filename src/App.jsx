@@ -1,8 +1,8 @@
 // Components
-import Header from './components/Header'
+import Header from './components/header'
 import Hero from './components/Hero';
 import About from './components/About';
-import Skill from './components/Skill';
+import Skill from './components/skill';
 import Work from './components/Work';
 import Review from './components/Review';
 import Review2 from './components/Sertifikat';

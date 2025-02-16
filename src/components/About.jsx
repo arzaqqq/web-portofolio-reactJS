@@ -76,7 +76,7 @@ const About = () => {
             ))}
 
             <img
-              src="/images/icon.png"
+              src="/images/logo-saja.png"
               alt="logo"
               width={30}
               height={30}
